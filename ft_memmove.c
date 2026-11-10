@@ -6,7 +6,7 @@
 /*   By: tom <tom@student.42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/11/01 13:40:24 by tom               #+#    #+#             */
-/*   Updated: 2026/11/02 11:10:37 by tom              ###   ########.fr       */
+/*   Updated: 2026/11/10 21:25:53 by tom              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,8 @@ void	*ft_memmove(void *dest, const void *src, size_t n)
 {
 	unsigned char *ptr_dest;
 
+	if (dest == NULL && src == NULL)
+		return (NULL);
 	ptr_dest = dest;
 	if (ptr_dest < (const unsigned char *) src)
 			return (ft_memcpy(dest, src, n));
@@ -34,16 +36,12 @@ void	*ft_memmove(void *dest, const void *src, size_t n)
 // int	main(int argc, char **argv)
 // {
 // 	(void)argc;
-// 	int n;
-// 	char *dest;
-// 	char *dest2;
-// 	char *src;
+// 	int n = 4;
+// 	char dest[]="abcdef";
+// 	char dest2[]="abcdef";
 
-// 	n = atoi(argv[2]);
-// 	dest = argv[1] + 2;
-// 	src = argv[1];
-// 	ft_memmove(dest, src, n);
+// 	ft_memmove(dest, dest + 2, n);
 // 	printf("%s\n", dest);
-// 	memmove(dest2, src, n);
-// 	printf("%s\n", dest);
+// 	ft_memmove(dest2 + 2, dest2, n);
+// 	printf("%s\n", dest2);
 // }

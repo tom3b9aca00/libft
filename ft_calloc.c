@@ -6,7 +6,7 @@
 /*   By: tom <tom@student.42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/11/02 11:57:49 by tom               #+#    #+#             */
-/*   Updated: 2026/11/02 13:30:14 by tom              ###   ########.fr       */
+/*   Updated: 2026/11/10 21:20:18 by tom              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,24 +15,34 @@
 void	*ft_calloc(size_t nmemb, size_t size)
 {
 	void	*ptr;
-	size_t all_size;
+	size_t total;
 
-	all_size = nmemb * size;
-	ptr = malloc(all_size);
+	total = nmemb * size;
+	ptr = malloc(total);
 	if (ptr == 0)
 		return (NULL);
-	ft_bzero(ptr, all_size);
+	ft_bzero(ptr, total);
 	return (ptr);
 }
 
-// #include <stdlib.h>
 // #include <stdio.h>
+// #include <stdlib.h>
 // #include <string.h>
 
 // int	main(int argc, char **argv)
 // {
-// 	(void)argc;
-// 	printf("%p\n", ft_calloc(ft_atoi(argv[1]), ft_atoi(argv[2])));
-// 	printf("%p\n", calloc(ft_atoi(argv[1]), ft_atoi(argv[2])));
+// 	size_t			total;
+// 	size_t			i;
+// 	unsigned char *dest;
 
+// 	dest = ft_calloc(atoi(argv[1]), atoi(argv[2]));
+// 	total = atoi(argv[1]) * atoi(argv[2]);
+// 	i = 0;
+// 	while (i < total)
+// 	{
+// 		printf("%d ", dest[i]);
+// 		i++;
+// 	}
+// 	printf("\n");
+// 	printf("%ld\n", total);
 // }

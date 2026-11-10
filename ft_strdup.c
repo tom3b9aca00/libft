@@ -6,7 +6,7 @@
 /*   By: tom <tom@student.42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/11/02 12:07:49 by tom               #+#    #+#             */
-/*   Updated: 2026/11/02 13:22:43 by tom              ###   ########.fr       */
+/*   Updated: 2026/11/10 21:23:28 by tom              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,13 +38,9 @@ char	*ft_strdup(const char *s)
 
 // int	main(int argc, char **argv)
 // {
-// 	(void)argc;
 // 	char *dest =  ft_strdup(argv[1]);
 // 	char *dest1 = strdup(argv[1]);
 
 // 	printf("%s\n", dest);
 // 	printf("%s\n", dest1);
-// 	free(dest);
-// 	free(dest1);
-// 	return (0);
 // }
